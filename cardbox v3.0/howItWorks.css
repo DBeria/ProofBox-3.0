@@ -1,0 +1,86 @@
+/* How It Works Section Styling */
+.how-it-works-container {
+    padding: 40px 20px;
+    background-color: #fdf9f1;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.how-it-works-container h2.style5 { /* Specificity for the heading */
+    font-family: 'Sora', sans-serif;
+    font-size: 3em;
+    color: #2d3748;
+    margin-bottom: 40px;
+}
+
+.how-it-works-grid {
+    display: flex;
+    flex-direction: column; /* Default to column for mobile */
+    gap: 20px;
+    align-items: center; /* Center items for column layout */
+}
+
+.how-it-works-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px; /* Limit width of individual cards */
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.how-it-works-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.how-it-works-card-number {
+    background-color: #FFCD17;
+    color: #000000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DynoBold', sans-serif;
+    font-size: 1.5em;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+}
+
+.how-it-works-card-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #333333;
+    line-height: 1.4;
+}
+
+/* Desktop styles for How It Works section */
+@media (min-width: 737px) {
+    .how-it-works-grid {
+        flex-direction: row; /* Arrange cards in a row on desktop */
+        flex-wrap: wrap; /* Allow cards to wrap to the next line */
+        justify-content: center; /* Center the cards horizontally */
+        gap: 30px; /* Adjust gap for desktop */
+    }
+
+    .how-it-works-card {
+        width: calc(33% - 20px); /* Approx 3 cards per row with spacing */
+        max-width: 280px; /* Adjust max-width for desktop cards */
+        flex-direction: column; /* Stack number and text vertically within the card */
+        text-align: center; /* Center text within the card */
+    }
+
+    .how-it-works-card-number {
+        margin-right: 0; /* Remove right margin for vertical stacking */
+        margin-bottom: 15px; /* Add bottom margin for spacing */
+    }
+}
